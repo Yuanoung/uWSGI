@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5357d860-b74e-4faf-8841-bd5755d7b1c9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uWSGI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uWSGI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,114 +17,102 @@
     <SUITE FILE_PATH="coverage/uWSGI$example02.coverage" NAME="example02 Coverage Results" MODIFIED="1519818124199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wsgi_tutorial" />
     <SUITE FILE_PATH="coverage/uWSGI$simple_server.coverage" NAME="simple_server Coverage Results" MODIFIED="1528378485014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Program Files/Python35/Lib/wsgiref" />
     <SUITE FILE_PATH="coverage/uWSGI$example04.coverage" NAME="example04 Coverage Results" MODIFIED="1519819676052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wsgi_tutorial" />
-    <SUITE FILE_PATH="coverage/uWSGI$main.coverage" NAME="main Coverage Results" MODIFIED="1528380071765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo" />
+    <SUITE FILE_PATH="coverage/uWSGI$main.coverage" NAME="main Coverage Results" MODIFIED="1528383580768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo" />
     <SUITE FILE_PATH="coverage/uWSGI$exmaple01.coverage" NAME="exmaple01 Coverage Results" MODIFIED="1523352671131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wsgi_tutorial" />
     <SUITE FILE_PATH="coverage/uWSGI$example03.coverage" NAME="example03 Coverage Results" MODIFIED="1519819621426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wsgi_tutorial" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="simple_server.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python35/Lib/wsgiref/simple_server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="144" column="4" lean-forward="true" selection-start-line="144" selection-start-column="4" selection-end-line="145" selection-end-column="23" />
-              <folding>
-                <element signature="e#553#611#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="platform.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python35/Lib/platform.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="1223" selection-start-line="1223" selection-end-line="1234" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="handlers.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python35/Lib/wsgiref/handlers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#55#113#0" expanded="true" />
-                <element signature="e#1211#3767#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="handler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/handler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-                <element signature="e#24#2580#0" />
-                <element signature="e#23#12401#0" />
-                <element signature="e#38#1416#0" />
-                <element signature="e#41#286#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="request.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/request.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="641" column="25" lean-forward="true" selection-start-line="641" selection-start-column="25" selection-end-line="641" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#114#1170#0" />
-                <element signature="e#136#1644#0" />
-                <element signature="e#2914#3363#0" />
-                <element signature="e#3446#3521#0" />
-                <element signature="e#154#18346#0" />
-                <element signature="e#154#3935#1" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="399" column="38" selection-start-line="399" selection-start-column="38" selection-end-line="399" selection-end-column="38" />
-              <folding>
-                <element signature="e#1#17#0" expanded="true" />
-                <element signature="e#23#7044#0" />
-                <element signature="e#7368#10632#0" />
-                <element signature="e#10702#11042#0" />
-                <element signature="e#10691#11400#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/demo/main.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="286">
+                  <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+                  <folding>
+                    <element signature="e#0#29#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/demo/server.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="348">
+                  <caret line="215" column="32" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#16#0" expanded="true" />
+                    <element signature="e#315#1273#1" />
+                    <element signature="e#7377#8458#1" />
+                    <element signature="e#9330#9682#0" />
+                    <element signature="e#9503#9644#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="request.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/demo/request.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="487">
+                  <caret line="395" column="20" selection-start-line="395" selection-start-column="20" selection-end-line="395" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                    <element signature="e#3555#7336#1" />
+                    <element signature="e#8159#12223#0" />
+                    <element signature="e#12266#12939#0" />
+                    <element signature="e#12983#14378#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="request.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/demo/request.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="716">
+                  <caret line="665" column="22" selection-start-line="665" selection-start-column="22" selection-end-line="665" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                    <element signature="e#3555#7336#1" />
+                    <element signature="e#12266#12939#0" />
+                    <element signature="e#12983#14378#0" />
+                    <element signature="e#14675#16678#0" />
+                    <element signature="e#16737#17130#0" />
+                    <element signature="e#17194#17721#0" />
+                    <element signature="e#17774#18308#0" />
+                    <element signature="e#18345#18524#0" />
+                    <element signature="e#18563#18698#0" />
+                    <element signature="e#18755#19014#0" />
+                    <element signature="e#19064#19366#0" />
+                    <element signature="e#19418#20108#0" />
+                    <element signature="e#20148#20256#0" />
+                    <element signature="e#20314#20697#0" />
+                    <element signature="e#20743#21011#0" />
+                    <element signature="e#21262#21333#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="handler.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/demo/handler.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="524">
+                  <caret line="139" column="34" lean-forward="true" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,7 +130,12 @@
       <find>_needs_transcode</find>
       <find>format_date_time</find>
       <find>software_version</find>
+      <find>command</find>
+      <find>get_request</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,10 +157,10 @@
         <option value="C:/Program Files/Python35/Lib/wsgiref/simple_server.py" />
         <option value="C:/Program Files/Python35/Lib/http/server.py" />
         <option value="$PROJECT_DIR$/demo/handler.py" />
+        <option value="$PROJECT_DIR$/demo/__init__.py" />
         <option value="$PROJECT_DIR$/demo/main.py" />
         <option value="$PROJECT_DIR$/demo/server.py" />
         <option value="$PROJECT_DIR$/demo/request.py" />
-        <option value="$PROJECT_DIR$/demo/__init__.py" />
       </list>
     </option>
   </component>
@@ -361,18 +349,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.47819063" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32747933" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32747933" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.38203463" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20340681" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.38119835" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20340681" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -381,30 +371,31 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25377643" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20340681" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32956383" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.37741935" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32747933" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.47819063" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997934" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.38119835" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -427,7 +418,7 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -534,13 +525,6 @@
       </provider>
     </entry>
     <entry file="file:///usr/lib/python2.7/wsgiref/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/.gitingore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wsgi_tutorial/exmaple01.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -581,7 +565,7 @@
     <entry file="file://C:/Program Files/Python35/Lib/wsgiref/handlers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#55#113#0" expanded="true" />
             <element signature="e#1211#3767#0" />
@@ -599,69 +583,88 @@
     <entry file="file://C:/Program Files/Python35/Lib/wsgiref/simple_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="144" column="4" lean-forward="true" selection-start-line="144" selection-start-column="4" selection-end-line="145" selection-end-column="23" />
+          <caret line="144" column="4" selection-start-line="144" selection-start-column="4" selection-end-line="145" selection-end-column="23" />
           <folding>
             <element signature="e#553#611#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/server.py">
+    <entry file="file://$PROJECT_DIR$/demo/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitingore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="399" column="38" selection-start-line="399" selection-start-column="38" selection-end-line="399" selection-end-column="38" />
+        <state relative-caret-position="22">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python35/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="496" column="25" selection-start-line="496" selection-start-column="25" selection-end-line="496" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1249248731/_socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="526" column="8" selection-start-line="526" selection-start-column="8" selection-end-line="526" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python35/Lib/selectors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="153" column="8" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="395" column="20" selection-start-line="395" selection-start-column="20" selection-end-line="395" selection-end-column="20" />
           <folding>
-            <element signature="e#1#17#0" expanded="true" />
-            <element signature="e#23#7044#0" />
-            <element signature="e#7368#10632#0" />
-            <element signature="e#10702#11042#0" />
-            <element signature="e#10691#11400#0" />
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#3555#7336#1" />
+            <element signature="e#8159#12223#0" />
+            <element signature="e#12266#12939#0" />
+            <element signature="e#12983#14378#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-            <element signature="e#24#2580#0" />
-            <element signature="e#23#12401#0" />
-            <element signature="e#38#1416#0" />
-            <element signature="e#41#286#0" />
-          </folding>
+        <state relative-caret-position="524">
+          <caret line="139" column="34" lean-forward="true" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/request.py">
+    <entry file="file://$PROJECT_DIR$/demo/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="641" column="25" lean-forward="true" selection-start-line="641" selection-start-column="25" selection-end-line="641" selection-end-column="25" />
+        <state relative-caret-position="348">
+          <caret line="215" column="32" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="32" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#114#1170#0" />
-            <element signature="e#136#1644#0" />
-            <element signature="e#2914#3363#0" />
-            <element signature="e#3446#3521#0" />
-            <element signature="e#154#18346#0" />
-            <element signature="e#154#3935#1" />
+            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#315#1273#1" />
+            <element signature="e#7377#8458#1" />
+            <element signature="e#9330#9682#0" />
+            <element signature="e#9503#9644#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="286">
+          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

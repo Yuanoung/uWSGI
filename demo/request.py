@@ -29,9 +29,9 @@ class BaseRequestHandler:
     """
 
     def __init__(self, request, client_address, server):
-        self.request = request
-        self.client_address = client_address
-        self.server = server
+        self.request = request  # 这个就是连接套接字
+        self.client_address = client_address  # (ip, port)
+        self.server = server  # 服务端程序
         self.setup()
         try:
             self.handle()
@@ -69,14 +69,14 @@ class StreamRequestHandler(BaseRequestHandler):
     disable_nagle_algorithm = False
 
     def setup(self):
-        self.connection = self.request
+        self.connection = self.request  # 已连接套接字
         if self.timeout is not None:
             self.connection.settimeout(self.timeout)
-        if self.disable_nagle_algorithm:
+        if self.disable_nagle_algorithm:  # 是否使用nagle算法
             self.connection.setsockopt(socket.IPPROTO_TCP,
                                        socket.TCP_NODELAY, True)
-        self.rfile = self.connection.makefile('rb', self.rbufsize)
-        self.wfile = self.connection.makefile('wb', self.wbufsize)
+        self.rfile = self.connection.makefile('rb', self.rbufsize)  # 读缓冲区
+        self.wfile = self.connection.makefile('wb', self.wbufsize)  # 写缓冲区
 
     def finish(self):
         if not self.wfile.closed:
@@ -359,14 +359,14 @@ class BaseHTTPRequestHandler(StreamRequestHandler):
 
         """
         try:
-            self.raw_requestline = self.rfile.readline(65537)
+            self.raw_requestline = self.rfile.readline(65537)  # 读取HTTP请求行
             if len(self.raw_requestline) > 65536:
                 self.requestline = ''
                 self.request_version = ''
                 self.command = ''
                 self.send_error(HTTPStatus.REQUEST_URI_TOO_LONG)
                 return
-            if not self.raw_requestline:
+            if not self.raw_requestline:  # 没有数据
                 self.close_connection = True
                 return
             if not self.parse_request():

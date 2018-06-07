@@ -59,11 +59,11 @@ class BaseServer:
 
     timeout = None
 
-    def __init__(self, server_address, RequestHandlerClass):
+    def __init__(self, server_address, RequestHandlerClass):  # 接受的参数：('', 8000), WSGIRequestHandler
         """Constructor.  May be extended, do not override."""
         self.server_address = server_address
         self.RequestHandlerClass = RequestHandlerClass
-        self.__is_shut_down = threading.Event()
+        self.__is_shut_down = threading.Event()  # 获得锁
         self.__shutdown_request = False
 
     def server_activate(self):
@@ -137,7 +137,7 @@ class BaseServer:
         # Support people who used socket.settimeout() to escape
         # handle_request before self.timeout was available.
         timeout = self.socket.gettimeout()
-        if timeout is None:
+        if timeout is None:  # 设置超时时间
             timeout = self.timeout
         elif self.timeout is not None:
             timeout = min(timeout, self.timeout)
@@ -147,15 +147,15 @@ class BaseServer:
         # Wait until a request arrives or the timeout expires - the loop is
         # necessary to accommodate early wakeups due to EINTR.
         with _ServerSelector() as selector:
-            selector.register(self, selectors.EVENT_READ)
+            selector.register(self, selectors.EVENT_READ)  # self是一個监听套接字
 
             while True:
                 ready = selector.select(timeout)
-                if ready:
-                    return self._handle_request_noblock()
+                if ready:  # 准备好读，也就是有一个请求
+                    return self._handle_request_noblock()  # 不会阻塞
                 else:
                     if timeout is not None:
-                        timeout = deadline - time()
+                        timeout = deadline - time()  # 没到规定的超时时间返回，可能被中断了
                         if timeout < 0:
                             return self.handle_timeout()
 
@@ -167,10 +167,10 @@ class BaseServer:
         blocking in get_request().
         """
         try:
-            request, client_address = self.get_request()
+            request, client_address = self.get_request()  # self.socket.accept(),接受连接，建立一个已连接套接字
         except OSError:
             return
-        if self.verify_request(request, client_address):
+        if self.verify_request(request, client_address):  # 验证地址是否相同
             try:
                 self.process_request(request, client_address)
             except:
@@ -283,20 +283,20 @@ class TCPServer(BaseServer):
 
     """
 
-    address_family = socket.AF_INET
+    address_family = socket.AF_INET  # 地址族，这里是IPV4
 
-    socket_type = socket.SOCK_STREAM
+    socket_type = socket.SOCK_STREAM  # 字节流套接字
 
-    request_queue_size = 5
+    request_queue_size = 5  # 监听套接字的缓冲队列大小
 
-    allow_reuse_address = False
+    allow_reuse_address = False  # 是否允许重用本地治
 
     def __init__(self, server_address, RequestHandlerClass, bind_and_activate=True):
         """Constructor.  May be extended, do not override."""
-        BaseServer.__init__(self, server_address, RequestHandlerClass)
-        self.socket = socket.socket(self.address_family,
+        BaseServer.__init__(self, server_address, RequestHandlerClass)  # ('', 8000), WSGIRequestHandler
+        self.socket = socket.socket(self.address_family,  # 创建一个套接字
                                     self.socket_type)
-        if bind_and_activate:
+        if bind_and_activate:  # 绑定监听的端口，并且激活等待客户端的请求
             try:
                 self.server_bind()
                 self.server_activate()
@@ -309,17 +309,39 @@ class TCPServer(BaseServer):
 
         May be overridden.
 
+        IP地址	        端口	    结果
+        通配地址	        0	    内核选择IP地址和端口
+        通配地址	        非0	    内核选择IP地址，进程指定端口
+        本地IP地址	    0	    进程指定IP地址，内核选择端口
+        本地IP地址	    非0	    进程指定IP地址和端口
+
         """
         if self.allow_reuse_address:
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self.socket.bind(self.server_address)
-        self.server_address = self.socket.getsockname()
+        self.socket.bind(self.server_address)  # ip地址为0，则内核分配一个ip地址
+        self.server_address = self.socket.getsockname()  # 只有通过函数才能得知内核分配的ip地址以及端口号
 
     def server_activate(self):
         """Called by constructor to activate the server.
 
         May be overridden.
 
+        request_queue_size 为相应套接字队列的最大连接个数
+
+        1. 未完成连接队列：
+            每个这样的SYN分节对应其中一项，已由某个客户发出并到达服务器，而服务器正在等待完成相应的TCP三路握手过程。
+            这些套接字处于SYN_RCVD状态。
+        2. 已完成连接队列：
+            每个已完成TCP三路握手过程的客户对应其中一项。这些套接字处于ESTABLISHED状态。
+        3. 每当在为完成连接队列中创建一项时，来自监听套接字的参数就复制到即将建立的连接中。这种机制完全自动，无需服务器进程插手。
+        4. 在未完成连接队列中连接，若在RTT时间内还未完成三次握手，则超时并从该队列中删除。
+        5. 当进程调用accept时，已完成连接队列中的队头项将返回给进程，或者如果该队列为空，那么进程将被投入睡眠，
+           直到TCP在该队列中放入一项才唤醒它。
+        6. 当一个客户SYN到达时，若这些队列满了，TCP应该忽略这些该字节，而不应该发送RST。
+           因为：这种情况时暂时的，客户TCP将重发SYN，期望不久就能在这些队列中有可用的空间。
+           要是服务器TCP立即响应一个RST，客户的connect调用就会立即返回一个错误，强制应用进
+           程处理这种情况，而不是让TCP的正常重传机制来处理。另外，客户无法区别响应SYN的RST
+           究竟意味着“该端口没有服务器在监听”，还是意味着“该端口有服务器在监听，不过它的队列满了”。
         """
         self.socket.listen(self.request_queue_size)
 
@@ -345,6 +367,7 @@ class TCPServer(BaseServer):
         May be overridden.
 
         """
+        print(1)
         return self.socket.accept()
 
     def shutdown_request(self, request):

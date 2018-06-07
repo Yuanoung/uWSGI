@@ -18,7 +18,8 @@ def make_server(
         host, port, app, server_class=WSGIServer, handler_class=WSGIRequestHandler
 ):
     """Create a new WSGI server listening on `host` and `port` for `app`"""
-    server = server_class((host, port), handler_class)
+    # server = server_class((host, port), handler_class)
+    server = WSGIServer((host, port), WSGIRequestHandler)  # 实例化服务器类
     server.set_app(app)
     return server
 
