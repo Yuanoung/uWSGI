@@ -167,7 +167,7 @@ class BaseServer:
         blocking in get_request().
         """
         try:
-            request, client_address = self.get_request()  # self.socket.accept(),接受连接，建立一个已连接套接字
+            request, client_address = self.get_request()  # self.socket.accept(),接受连接，为其建立一个已连接套接字
         except OSError:
             return
         if self.verify_request(request, client_address):  # 验证地址是否相同

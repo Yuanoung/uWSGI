@@ -5,7 +5,7 @@ from request import WSGIRequestHandler
 def demo_app(environ, start_response):
     from io import StringIO
     stdout = StringIO()
-    print("Hello world!", file=stdout)
+    print("Hello world!", file=stdout)  # 把数据写入到StringIO()缓冲区，stdout.getvalue()取出数据
     print(file=stdout)
     h = sorted(environ.items())
     for k, v in h:
@@ -25,11 +25,11 @@ def make_server(
 
 
 if __name__ == '__main__':
-    httpd = make_server('', 8000, demo_app)
+    httpd = make_server('', 8782, demo_app)
     sa = httpd.socket.getsockname()
     print("Serving HTTP on", sa[0], "port", sa[1], "...")
     import webbrowser
 
-    webbrowser.open('http://localhost:8000/xyz?abc')
+    webbrowser.open('http://localhost:8782/xyz?abc')
     httpd.handle_request()  # serve one request, then exit
     httpd.server_close()

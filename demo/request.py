@@ -26,6 +26,12 @@ class BaseRequestHandler:
     separate instance is created for each request, the handle() method
     can define other arbitrary instance variables.
 
+    处理请求类的基类
+
+    该类为每一个需要处理的请求实例化，接收三个参数：连接套接字`request`,
+    客服端地址`(ip, port)`,服务器进程实例(server),然后调用handler()处理
+    请求．为了定制特殊的服务，你所要做的是重载handle()方法．
+
     """
 
     def __init__(self, request, client_address, server):
@@ -369,10 +375,10 @@ class BaseHTTPRequestHandler(StreamRequestHandler):
             if not self.raw_requestline:  # 没有数据
                 self.close_connection = True
                 return
-            if not self.parse_request():
+            if not self.parse_request():  # 检查下请求头
                 # An error code has been sent, just exit
                 return
-            mname = 'do_' + self.command
+            mname = 'do_' + self.command  # HTTP方法
             if not hasattr(self, mname):
                 self.send_error(
                     HTTPStatus.NOT_IMPLEMENTED,
@@ -641,7 +647,7 @@ class WSGIRequestHandler(BaseHTTPRequestHandler):
     def get_stderr(self):
         return sys.stderr
 
-    def handle(self):
+    def handle(self):  # 执行的时这个handler(),而不是父类的handler()
         """Handle a single HTTP request"""
         from handler import ServerHandler
         self.raw_requestline = self.rfile.readline(65537)
@@ -663,6 +669,6 @@ class WSGIRequestHandler(BaseHTTPRequestHandler):
                 self.rfile, stdout, self.get_stderr(), self.get_environ()
             )
             handler.request_handler = self  # backpointer for logging
-            handler.run(self.server.get_app())
+            handler.run(self.server.get_app())  # demo_app
         finally:
             stdout.detach()
