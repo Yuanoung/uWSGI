@@ -468,3 +468,7 @@ class ServerHandler(SimpleHandler):
             )
         finally:
             SimpleHandler.close(self)
+
+
+if __name__ == "__main__":
+    print(ServerHandler.__mro__)

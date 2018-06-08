@@ -33,3 +33,4 @@ if __name__ == '__main__':
     webbrowser.open('http://localhost:8782/xyz?abc')
     httpd.handle_request()  # serve one request, then exit
     httpd.server_close()
+    # print(WSGIRequestHandler.__mro__)
